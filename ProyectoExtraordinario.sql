@@ -30,7 +30,7 @@ create table Venta
 (	IdVenta int not null identity primary key,
 	IdVen int not null  foreign key references Vendedor (IdVen),
 	IdCli int not null  foreign key references Cliente  (IdCli),
-	IdPro int not null,
+	IdPro int not null foreign key references Producto  (IdPro),
 	NumArt int not null, 
 	PrecioProd int not null,
 	TotalPago AS NumArt * PrecioProd,
@@ -121,17 +121,11 @@ as
 SELECT* FROM Venta as V
 WHERE IdVen = 2
 
-CREATE PROCEDURE GetReporteTotal
-as 
-SELECT* FROM Venta as V
-
 
 
 exec GetReporteJaime
 
 exec GetReporteSalvador
-
-exec GetReporteTotal
 
 update Producto
 set PrecioProdu = 7
