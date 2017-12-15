@@ -2,7 +2,7 @@
 
 -- talvez este proyecto no sea tan grande como lo fue nuestro proyecto de primera oportunidad pero es funcional
 -- procure que a pesar de no ser tan grande llevara todo lo que se pidio
--- no esta en la escala o tamaño que el de primera pues no tuve el mismo tiempo y desafortunadamante no fue mi
+-- no esta en la escala o tamaÃ±o que el de primera pues no tuve el mismo tiempo y desafortunadamante no fue mi
 -- unica segunda :/ y con el trabajo pues no tuve mucho tiempo para sentarme y hacerlo exepcional
 -- pero ojala se un buen proyecto 
 
@@ -66,7 +66,7 @@ insert into Cliente values
 ( 'bruno Ledezma', 'Bruno@gmail.com', 12345, 19 )
 
 insert into Cliente values
-( 'Enrique Peña', 'peña@gmail.com', 23456, 30 )
+( 'Enrique PeÃ±a', 'peÃ±a@gmail.com', 23456, 30 )
 
 select * from Cliente
 
@@ -121,11 +121,17 @@ as
 SELECT* FROM Venta as V
 WHERE IdVen = 2
 
+CREATE PROCEDURE GetReporteTotal
+as 
+SELECT* FROM Venta as V
+
 
 
 exec GetReporteJaime
 
 exec GetReporteSalvador
+
+exec GetReporteTotal
 
 update Producto
 set PrecioProdu = 7
