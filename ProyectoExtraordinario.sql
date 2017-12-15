@@ -111,6 +111,7 @@ select * from Venta
 select * from Producto
 
 
+
 CREATE PROCEDURE GetReporteSalvador
 as 
 SELECT* FROM Venta as V
@@ -121,11 +122,18 @@ as
 SELECT* FROM Venta as V
 WHERE IdVen = 2
 
+CREATE PROCEDURE GetReporteTotal
+as 
+SELECT* FROM Venta as V
+
 
 
 exec GetReporteJaime
 
 exec GetReporteSalvador
+
+exec GetReporteTotal
+
 
 update Producto
 set PrecioProdu = 7
